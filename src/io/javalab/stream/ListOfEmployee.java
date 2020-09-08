@@ -3,6 +3,8 @@ package io.javalab.stream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.stream.Collectors;
+
 //multiple sorting criteria
 public class ListOfEmployee {
     public static void main(String[] args) {
@@ -17,8 +19,14 @@ public class ListOfEmployee {
         list.add( new Employee(7, "cad") );
         list.add( new Employee(6, "ved") );
 
-        Collections.sort(list,Comparator.comparing(Employee::getName).thenComparing(Employee::getId));
+        list.stream().sorted(Comparator.comparing(Employee::getName).thenComparing(Employee::getId)).collect(Collectors.toList()).forEach(System.out::println);
 
-        System.out.println(list);
+        System.out.println("---------------------------");
+
+        list.stream().sorted(Collections.reverseOrder(Comparator.comparing(Employee::getName).thenComparing(Employee::getId))).collect(Collectors.toList()).forEach(System.out::println);
+
+        //Collections.sort(list,Comparator.comparing(Employee::getName).thenComparing(Employee::getId));
+
+        //System.out.println(list);
     }
 }
