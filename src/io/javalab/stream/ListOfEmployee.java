@@ -17,8 +17,6 @@ public class ListOfEmployee {
         list.add( new Employee(7, "cad") );
         list.add( new Employee(6, "ved") );
 
-
-
         Collections.sort(list,Comparator.comparing(Employee::getName).thenComparing(Employee::getId));
 
         System.out.println(list);
