@@ -9,7 +9,7 @@ public class ArrayIteration {
     public static void main(String[] args) {
         Integer [] arr={11,22,39,42,5,6};
 
-        //doubling the array element
+        ////doubling the array element
         List<Integer> li=Arrays.asList(arr).stream().map(i->i*2).collect(Collectors.toList());
 
         Integer [] arr2=new Integer[li.size()];
