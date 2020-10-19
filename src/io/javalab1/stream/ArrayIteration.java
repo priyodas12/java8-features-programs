@@ -1,4 +1,4 @@
-package io.javalab.stream;
+package io.javalab1.stream;
 
 import java.util.Arrays;
 import java.util.Comparator;

@@ -1,6 +1,4 @@
-package io.javalab.stream;
-
-import java.util.Comparator;
+package io.javalab1.stream;
 
 public class Employee {
     int id;

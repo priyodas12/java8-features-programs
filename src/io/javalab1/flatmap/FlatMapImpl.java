@@ -1,4 +1,4 @@
-package io.javalab.flatmap;
+package io.javalab1.flatmap;
 
 import java.util.Arrays;
 import java.util.List;
