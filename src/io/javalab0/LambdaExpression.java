@@ -8,7 +8,7 @@ import java.util.List;
 
 public class LambdaExpression {
     public static void main(String[] args) {
-        List<Integer> numbers= Arrays.asList(9,2,3,8,5,6,7);
+        List<Integer> numbers= Arrays.asList(9,1,3,8,5,6,7);
 
         numbers.forEach(integer -> System.out.print(integer));
 
@@ -17,5 +17,7 @@ public class LambdaExpression {
         numbers.stream().forEachOrdered(integer -> System.out.println(integer));
 
         numbers.stream().forEach(integer -> System.out.println(integer));
+
+        System.out.println(numbers.stream().map(integer -> integer*3).reduce(0,(a, b) -> a+b));
     }
 }
