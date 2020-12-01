@@ -1,16 +1,17 @@
 package io.javalab1.flatmap;
 
+import java.util.Arrays;
 import java.util.stream.Stream;
 
 public class FlatMapImpl2 {
 
     public static void main(String[] args) {
         // Creating a Stream of Strings
-        Stream<String> stream = Stream.of("abc", "bca",
-                "def", "dfg");
+        Stream<String> stream = Stream.of("abc", "bca", "def", "dfg");
 
         // Using forEachOrdered(Consumer action)
-        stream.flatMap(str-> Stream.of(str.charAt(2)))
-                .forEachOrdered(System.out::println);
+        //stream.flatMap(str-> Stream.of(str.charAt(2))).forEachOrdered(System.out::println);
+
+        Arrays.asList("abcd", "bcah", "defk", "dfgs").stream().flatMapToInt(x->x.chars()).forEach(x-> System.out.println((char)x));
     }
 }
