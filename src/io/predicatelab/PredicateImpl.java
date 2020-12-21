@@ -18,12 +18,22 @@ public class PredicateImpl {
             return s.length()>5;
         };
 
+        Predicate<String> p4=Predicate.isEqual("Priyo");
+
         System.out.println(p1.test(10));
         System.out.println(p3.test("abcdfdf"));
+
         //checks the opposite condition of predicate
         System.out.println(p1.negate().test(100));
+
         //checks both predicate condition and AND result of both predicate
         System.out.println(p1.and(p2).test(9));
+
+        //checks both predicate condition and OR result of both predicate
+        System.out.println(p1.or(p2).test(11));
+
+        System.out.println(p4.test("Priyo"));
+
 
 
     }
