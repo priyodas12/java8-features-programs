@@ -9,7 +9,8 @@ public class Sample {
 
         numbers.stream()
                // .map(num->Integer.toString(num))
-                .map(String::valueOf)
+               // .map(String::valueOf)//static method
+                .map(e->e.toString())//instance method
                 .forEach(System.out::println);
     }
 }
