@@ -14,12 +14,20 @@ public class Sample {
                 .forEach(System.out::println);
 
         int sum=numbers.stream()
-                .reduce(0,(total,e)->Integer.sum(total,e));
+                //order of argument is important
+                .reduce(0,(total,e)->Integer.sum(e,total));
 
         // using method reference
         sum=numbers.stream()
                 .reduce(0,Integer::sum);
 
         System.out.println("sum:: "+sum);
+
+        String concatVal=numbers.stream()
+                .map(String::valueOf)
+                //.reduce("",(carry,e)->carry.concat(e));
+                .reduce("",String::concat);
+
+        System.out.println(concatVal);
     }
 }
