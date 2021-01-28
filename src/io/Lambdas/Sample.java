@@ -12,5 +12,14 @@ public class Sample {
                // .map(String::valueOf)//static method
                 .map(e->e.toString())//instance method
                 .forEach(System.out::println);
+
+        int sum=numbers.stream()
+                .reduce(0,(total,e)->Integer.sum(total,e));
+
+        // using method reference
+        sum=numbers.stream()
+                .reduce(0,Integer::sum);
+
+        System.out.println("sum:: "+sum);
     }
 }
