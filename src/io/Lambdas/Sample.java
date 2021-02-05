@@ -29,5 +29,7 @@ public class Sample {
                 .reduce("",String::concat);
 
         System.out.println(concatVal);
+
+
     }
 }
