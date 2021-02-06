@@ -2,10 +2,11 @@ package io.gc;
 
 public class Demo {
     public static void main(String[] args) throws Exception {
+
         Demo d1=new Demo();
         Demo d2=new Demo();
 
-        d1=null;
+        // d1=null;
 
         System.gc();
 
