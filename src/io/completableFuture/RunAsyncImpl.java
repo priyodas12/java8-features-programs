@@ -15,6 +15,7 @@ public class RunAsyncImpl {
             e.printStackTrace();
         }
     }
+
     public static void main(String[] args) {
         ExecutorService executorService= Executors.newFixedThreadPool(8);
         Runnable runnable=()->{
