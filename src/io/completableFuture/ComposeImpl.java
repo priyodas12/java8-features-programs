@@ -3,7 +3,7 @@ package io.completableFuture;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
-
+/*Combining dependent future*/
 public class ComposeImpl {
 
     private static void delay(int sec) {
