@@ -13,7 +13,7 @@ public class ArrayListImpl {
         Iterator<Integer> itr= failFastNumbers.iterator();
         for(Iterator<Integer> itr1= failFastNumbers.iterator(); itr1.hasNext();){
             Integer i=itr1.next();
-            if(i==4){
+            if(i==3){
                 failFastNumbers.remove(i);
             }
             System.out.println(i);
