@@ -1,4 +1,4 @@
-package io.javalab0;
+package io.java8.features.functionalInterface;
 //single abstract method
 
 @FunctionalInterface
